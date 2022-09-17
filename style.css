@@ -97,6 +97,14 @@ body>.container>.cards>.newCard {
     cursor: pointer;
 }
 
+body>.container>.cards>.newCard:hover {
+    -webkit-box-shadow: 0px 0px 40px 2px #808FBE;
+    -moz-box-shadow: 0px 0px 40px 2px #808FBE;
+    box-shadow: 0px 0px 40px 2px #808FBE;
+
+    transition: box-shadow 0.3s ease-in-out;
+}
+
 body>.container>.cards>.newCard>p {
     font-size: 14px;
     color: #8795C5;
