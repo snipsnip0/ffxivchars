@@ -1,8 +1,8 @@
 .container>.content>.cards {
     display: grid;
 
-    grid-template-columns: repeat(4, 173px);
-    grid-template-rows: repeat(2, 208px);
+    grid-template-columns: repeat(8, 173px);
+    grid-template-rows: repeat(3, 208px);
 
     row-gap: 20px;
     column-gap: 20px;

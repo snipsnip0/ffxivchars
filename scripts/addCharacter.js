@@ -4,7 +4,7 @@ var cardsElement = document.getElementsByClassName("cards")[0];
 var max = 0;
 
 function addChar() {
-    if (max == 10) return;
+    if (max == 22) return;
 
 
     let name = document.createElement("p");
