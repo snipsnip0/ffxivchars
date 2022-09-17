@@ -35,6 +35,10 @@
     background-color: #242B42;
 }
 
+.container>.sidebarMenu>.menuItem.selected:not(.disabled) {
+    background-color: #2f3a55;
+}
+
 .container>.sidebarMenu>.menuItem>i {
     font-size: 32px;
 }
