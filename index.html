@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/cards.css">
     <link rel="stylesheet" href="styles/sidebarMenu.css">
+    <link rel="stylesheet" href="styles/pageTitle.css">
 </head>
 
 <body>
@@ -17,78 +18,59 @@
         <div class="sidebarMenu">
             <div class="menuItem disabled">
             </div>
-            <div onclick="(document.getElementsByClassName('selected')[0]) ? document.getElementsByClassName('selected')[0].classList.toggle('selected') : (() => {}); this.classList.toggle('selected')"
-                class="menuItem">
+            <div contentTitle="Messages" onclick="changeMenu(this)" class="menuItem">
                 <i class="fa-solid fa-message"></i>
             </div>
-            <div onclick="(document.getElementsByClassName('selected')[0]) ? document.getElementsByClassName('selected')[0].classList.toggle('selected') : (() => {}); this.classList.toggle('selected')"
-                class="menuItem">
+            <div contentTitle="Characters" onclick="changeMenu(this)" class="menuItem selected">
                 <i class="fa-solid fa-user-group"></i>
             </div>
-            <div onclick="(document.getElementsByClassName('selected')[0]) ? document.getElementsByClassName('selected')[0].classList.toggle('selected') : (() => {}); this.classList.toggle('selected')"
-                class="menuItem">
+            <div contentTitle="Favorite Characters" onclick="changeMenu(this)" class="menuItem">
                 <i class="fa-solid fa-heart"></i>
             </div>
-            <div onclick="(document.getElementsByClassName('selected')[0]) ? document.getElementsByClassName('selected')[0].classList.toggle('selected') : (() => {}); this.classList.toggle('selected')"
-                class="menuItem">
+            <div contentTitle="Settings" onclick="changeMenu(this)" class="menuItem">
                 <i class="fa-solid fa-gear"></i>
             </div>
             <div class="menuItem disabled">
             </div>
         </div>
-        <div class="cards">
-            <div onclick="addChar()" class="newCard">
-                <i class="fa-solid fa-circle-plus"></i>
-                <p>New Character</p>
-            </div>
-            <div class="card">
-                <i class="fa-solid fa-circle-user"></i>
-                <p class="name">Rowan Norgloom</p>
-                <p class="class">Scholar</p>
+
+        <div class="content">
+            <div class="pageTitle">
+                <i class="fa-solid fa-arrow-left"></i>
+                <h1 id="title">Characters</h1>
             </div>
 
+            <div class="cards">
+                <div onclick="addChar()" class="newCard">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <p>New Character</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p class="name">Rowan Norgloom</p>
+                    <p class="class">Scholar</p>
+                </div>
+
+            </div>
         </div>
     </div>
 
-    <script src="names.js"></script>
-    <script src="surnames.js"></script>
+    <script src="db/names.js"></script>
+    <script src="db/surnames.js"></script>
+    <script src="db/classes.js"></script>
+    <script src="scripts/addCharacter.js"></script>
+
     <script>
-        var cardsElement = document.getElementsByClassName("cards")[0];
-        var classes = ["Paladin", "Warrior", "Dark Knight", "Gunbreaker",
-            "White Mage", "Scholar", "Astrologian", "Sage",
-            "Monk", "Dragoon", "Ninja", "Samurai", "Reaper",
-            "Bard", "Machinist", "Dancer",
-            "Black Mage", "Summoner", "Red Mage", "Blue Mage",
-        ];
+        function changeMenu(menuItem) {
+            if (document.getElementsByClassName('selected')[0]) {
+                document.getElementsByClassName('selected')[0].classList.toggle('selected');
+            }
 
-        var max = 0;
+            menuItem.classList.toggle('selected');
 
-        function addChar() {
-            if (max == 10) return;
-
-
-            let name = document.createElement("p");
-            let classe = document.createElement("p");
-            let icon = document.createElement("i");
-
-            name.textContent = `${names[Math.floor(Math.random() * names.length)]} ${surnames[Math.floor(Math.random() * surnames.length)]}`;
-            classe.textContent = `${classes[Math.floor(Math.random() * classes.length)]}`;
-
-            name.classList.add("name");
-            classe.classList.add("class");
-            icon.classList.add("fa-solid");
-            icon.classList.add("fa-circle-user");
-
-            let character = document.createElement("div");
-            character.classList.add("card");
-            character.append(icon);
-            character.append(name);
-            character.append(classe);
-
-            cardsElement.append(character);
-
-            max++;
+            document.getElementById("title").textContent = menuItem.getAttribute('contentTitle');
         }
+
     </script>
 </body>
 

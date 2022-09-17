@@ -1,4 +1,4 @@
-body>.container>.cards {
+.container>.content>.cards {
     display: grid;
 
     grid-template-columns: repeat(4, 173px);
@@ -13,7 +13,7 @@ body>.container>.cards {
     align-self: flex-end;
 }
 
-body>.container>.cards>.card {
+.container>.content>.cards>.card {
     background-color: #1A2036;
 
     display: flex;
@@ -27,7 +27,7 @@ body>.container>.cards>.card {
     border-radius: 10px;
 }
 
-body>.container>.cards>.card>.name {
+.container>.content>.cards>.card>.name {
     font-size: 16px;
     color: #8795C5;
 
@@ -36,7 +36,7 @@ body>.container>.cards>.card>.name {
     margin-bottom: 0;
 }
 
-body>.container>.cards>.card>.class {
+.container>.content>.cards>.card>.class {
     font-size: 14px;
     color: #8795C5;
 
@@ -44,7 +44,7 @@ body>.container>.cards>.card>.class {
     margin-bottom: 0;
 }
 
-body>.container>.cards>.card>i {
+.container>.content>.cards>.card>i {
     background-color: #808FBE;
     color: #242B42;
 
@@ -53,7 +53,7 @@ body>.container>.cards>.card>i {
     border-radius: 55px;
 }
 
-body>.container>.cards>.newCard {
+.container>.content>.cards>.newCard {
     background-color: #2E3650;
 
     display: flex;
@@ -69,7 +69,7 @@ body>.container>.cards>.newCard {
     cursor: pointer;
 }
 
-body>.container>.cards>.newCard:hover {
+.container>.content>.cards>.newCard:hover {
     -webkit-box-shadow: 0px 0px 40px 2px #808FBE;
     -moz-box-shadow: 0px 0px 40px 2px #808FBE;
     box-shadow: 0px 0px 40px 2px #808FBE;
@@ -77,13 +77,13 @@ body>.container>.cards>.newCard:hover {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-body>.container>.cards>.newCard>p {
+.container>.content>.cards>.newCard>p {
     font-size: 14px;
     color: #8795C5;
     font-weight: bold;
 }
 
-body>.container>.cards>.newCard>i {
+.container>.content>.cards>.newCard>i {
     background-color: #808FBE;
     color: #242B42;
 

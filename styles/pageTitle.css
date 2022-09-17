@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.container>.content>.pageTitle {
+    width: 100%;
+
+    margin-top: 50px;
+    margin-bottom: 45px;
+}
+
+.container>.content>.pageTitle>#title {
+    display: inline-block;
+    color: #B1B9D8;
+    font-size: 3.5em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+
+    margin-left: 12px;
+}
+
+.container>.content>.pageTitle>i {
+    color: #B1B9D8;
+    font-size: 3.5em;
+}

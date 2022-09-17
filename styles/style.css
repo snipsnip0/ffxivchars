@@ -14,7 +14,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-body>.container {
+.container {
     background-color: #252B42;
 
     display: flex;
@@ -26,4 +26,9 @@ body>.container {
     padding: 35px;
 
     border-radius: 25px;
+}
+
+.container>.content {
+    width: 100%;
+    height: 100%;
 }

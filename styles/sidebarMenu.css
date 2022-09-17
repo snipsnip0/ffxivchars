@@ -6,10 +6,10 @@
     align-items: center;
     justify-content: space-evenly;
 
-    width: 88px;
+    width: 125px;
     height: 100%;
 
-    margin-right: 40px;
+    margin-right: 70px;
 
     border-radius: 20px;
 }
@@ -27,12 +27,12 @@
     height: 58px;
 
     border-radius: 10px;
-
-    cursor: pointer;
 }
 
 .container>.sidebarMenu>.menuItem:hover:not(.disabled) {
     background-color: #242B42;
+
+    cursor: pointer;
 }
 
 .container>.sidebarMenu>.menuItem.selected:not(.disabled) {
