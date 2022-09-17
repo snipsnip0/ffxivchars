@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+    background: #1A2036;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body>.container {
+    background-color: #252B42;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 975px;
+    height: 662px;
+
+    padding: 80px;
+
+    border-radius: 25px;
+}
+
+body>.container>.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 173px);
+    grid-template-rows: repeat(2, 208px);
+
+    row-gap: 20px;
+    column-gap: 20px;
+
+    user-select: none;
+}
+
+body>.container>.cards>.card {
+    background-color: #1A2036;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 173px;
+    height: 208px;
+
+    border-radius: 10px;
+}
+
+body>.container>.cards>.card>.name {
+    font-size: 16px;
+    color: #8795C5;
+
+    font-weight: bold;
+
+    margin-bottom: 0;
+}
+
+body>.container>.cards>.card>.class {
+    font-size: 14px;
+    color: #8795C5;
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body>.container>.cards>.card>i {
+    background-color: #808FBE;
+    color: #242B42;
+
+    font-size: 56px;
+
+    border-radius: 55px;
+}
+
+body>.container>.cards>.newCard {
+    background-color: #2E3650;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 173px;
+    height: 208px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+body>.container>.cards>.newCard>p {
+    font-size: 14px;
+    color: #8795C5;
+    font-weight: bold;
+}
+
+body>.container>.cards>.newCard>i {
+    background-color: #808FBE;
+    color: #242B42;
+
+    font-size: 56px;
+
+    border-radius: 55px;
+}

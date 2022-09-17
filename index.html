@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e31e84bdd6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cards">
+            <div onclick="addChar()" class="newCard">
+                <i class="fa-solid fa-circle-plus"></i>
+                <p>New Character</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-circle-user"></i>
+                <p class="name">Rowan Norgloom</p>
+                <p class="class">Scholar</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="names.js"></script>
+    <script src="surnames.js"></script>
+    <script>
+        var cardsElement = document.getElementsByClassName("cards")[0];
+        var classes = ["Paladin", "Warrior", "Dark Knight", "Gunbreaker",
+            "White Mage", "Scholar", "Astrologian", "Sage",
+            "Monk", "Dragoon", "Ninja", "Samurai", "Reaper",
+            "Bard", "Machinist", "Dancer",
+            "Black Mage", "Summoner", "Red Mage", "Blue Mage",
+        ];
+
+        var max = 0;
+
+        function addChar() {
+            if (max == 10) return;
+
+
+            let name = document.createElement("p");
+            let classe = document.createElement("p");
+            let icon = document.createElement("i");
+
+            name.textContent = `${names[Math.floor(Math.random() * names.length)]} ${surnames[Math.floor(Math.random() * surnames.length)]}`;
+            classe.textContent = `${classes[Math.floor(Math.random() * classes.length)]}`;
+
+            name.classList.add("name");
+            classe.classList.add("class");
+            icon.classList.add("fa-solid");
+            icon.classList.add("fa-circle-user");
+
+            let character = document.createElement("div");
+            character.classList.add("card");
+            character.append(icon);
+            character.append(name);
+            character.append(classe);
+
+            cardsElement.append(character);
+
+            max++;
+        }
+    </script>
+</body>
+
+</html>
